@@ -27,7 +27,7 @@ const ContactUs = () => {
     const loadingToast = toast.loading("Sending message...");
 
     try {
-      const res = await axios.post("https://agencywebsite-backend-3.onrender.com/api/contact", formData);
+      const res = await axios.post("https://agencywebsite-backend.onrender.com/api/contact", formData);
 
       if (res.status >= 200 && res.status < 300) {
         toast.success("Message sent successfully!", { id: loadingToast });
